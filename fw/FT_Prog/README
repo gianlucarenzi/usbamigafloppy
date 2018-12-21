@@ -1,0 +1,20 @@
+#
+# $Id: README,v 1.1 2018/12/20 15:38:45 gianluca Exp $
+# 
+# Il software script per Linux programma la eeprom dei chip FTDI
+# utilizzando una configurazione specifica (per quanto possibile uguale a quella generata
+# dal tool ftdi prog su Windows) con un serial number differente ogni volta.
+
+# Il software si preoccupa di scaricare dal server il database dei serial number gia` applicati.
+# Ne viene generato successivamente uno random dal computer che lancia l'applicativo e
+# viene verificato che non sia gia` presente nel database.
+# Nel caso affermativo ne viene generato un'altro finche` viene soddisfatta la richiesta di
+# assenza nel database.
+
+# Viene aggiornato tale numero seriale per la configurazione della eeprom e viene cancellata
+# la EEPROM. Poi successivamente viene ri-flashata con il numero seriale corretto.
+# In caso di errore deve essere ripetuta la procedura.
+# Nel caso in cui, invece, tutto termini correttamente il numero seriale viene aggiunto
+# al database ed il database viene aggiornato anche in remoto per ulteriori programmazioni anche da computer differenti.
+
+ 

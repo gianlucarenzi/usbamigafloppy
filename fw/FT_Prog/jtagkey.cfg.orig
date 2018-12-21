@@ -1,0 +1,11 @@
+vendor_id=0x0403
+product_id=0x6010
+remote_wakeup=false
+self_powered=false
+# BusPowered = true
+# IOpullDown = false
+max_power=500
+manufacturer="RetroBit Lab"
+product="Amiga Disk Waffle USB"
+use_serial=true
+serial=WAFFLE-YJXS5
