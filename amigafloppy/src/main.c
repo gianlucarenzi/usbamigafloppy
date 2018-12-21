@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 		return 1;
 	}
 
-	if(init_device(opt.devfile) == -1) {
+	if(init_device(opt.devfile, opt.baudrate) == -1) {
 		return 1;
 	}
 
