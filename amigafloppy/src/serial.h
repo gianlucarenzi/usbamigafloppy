@@ -38,4 +38,6 @@ int ser_read(int fd, void *buf, int count);
 void ser_printf(int fd, const char *fmt, ...);
 char *ser_getline(int fd, char *buf, int bsz);
 
+void ser_flush(int fd);
+
 #endif	/* SERIAL_H_ */
