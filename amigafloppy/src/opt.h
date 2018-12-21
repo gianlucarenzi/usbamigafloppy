@@ -25,6 +25,7 @@ struct options {
 	int write_disk;
 	int verbose;
 	int retries;
+	int baudrate;
 } opt;
 
 int init_options(int argc, char **argv);
