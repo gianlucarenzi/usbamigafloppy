@@ -20,7 +20,10 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include <string.h>
+#include <stdio.h>
 
+#define VERSION_STR			"V1.6"
 
 #define INDEX_PORT			PIND
 #define INDEX_BIT			0x04
@@ -54,10 +57,11 @@
 #define LED_PORT			PORTB
 #define LED_BIT				0x20
 
+
 #define BAUDRATE 2000000
 
-#define BAUD_PRESCALLER_NORMAL_MODE	  (((F_CPU / (BAUDRATE * 16UL))) - 1)
-#define BAUD_PRESCALLER_DOUBLESPEED_MODE (((F_CPU / (BAUDRATE * 8UL))) - 1)
+#define BAUD_PRESCALLER_NORMAL_MODE      (F_CPU / 16 / BAUDRATE - 1)
+#define BAUD_PRESCALLER_DOUBLESPEED_MODE (F_CPU /  8 / BAUDRATE - 1)
 /* We're using double speed mode */
 #define UART_USE_DOUBLESPEED_MODE
 
@@ -99,6 +103,33 @@ int main(void)
 	return 0;
 }
 
+static inline void led_blink(int delay)
+{
+	PORTB |= LED_BIT;
+	smalldelay(delay);
+	PORTB &= ~LED_BIT;
+	smalldelay(delay);
+}
+
+static inline void led_off(void)
+{
+	PORTB &= ~LED_BIT;
+}
+
+static void notify_ready(int delay)
+{
+	int i;
+	char ready[32];
+
+	sprintf(ready, "AMIGA IS READY TO ROLL!\n\r");
+
+	for (i = 0; i < strlen(ready); i++)
+	{
+		write_byte_to_uart(ready[i]);
+		led_blink(delay);
+	}
+}
+
 static void setup(void)
 {
 	DDRB = 0x22;	/* outputs: 1 (head sel), 5 (act LED) */
@@ -118,14 +149,21 @@ static void setup(void)
 
 	/* Setup the USART */
 	prep_serial_interface();
-}
 
+	/* Notify with the ACT LED we are ready to roll!! */
+	notify_ready(50);
+
+	led_off();
+}
 
 /* The main command loop */
 static void loop(void)
 {
 	unsigned char command;
+	int i;
+	char version[4]; /* it must be 4 characters */
 
+	sprintf(version, VERSION_STR);
 	CTS_PORT &= ~CTS_BIT;		/* Allow data incoming */
 	WGATE_PORT |= WGATE_BIT;   /* always turn writing off */
 
@@ -136,10 +174,10 @@ static void loop(void)
 	case '?':
 		/* Command: "?" Means information about the firmware */
 		write_byte_to_uart('1');  /* Success */
-		write_byte_to_uart('V');  /* Followed */
-		write_byte_to_uart('1');  /* By */
-		write_byte_to_uart('.');  /* Version */
-		write_byte_to_uart('3');  /* Number */
+		for (i = 0; i < strlen(version); i++)
+		{
+			write_byte_to_uart(version[i]);
+		}
 		break;
 
 		/* Command "." means go back to track 0 */
@@ -316,18 +354,38 @@ static void step_direction_head(void)
 static void prep_serial_interface(void)
 {
 #ifdef UART_USE_DOUBLESPEED_MODE
-	UBRR0H = (uint8_t)(BAUD_PRESCALLER_DOUBLESPEED_MODE>>8);
-	UBRR0L = (uint8_t)(BAUD_PRESCALLER_DOUBLESPEED_MODE);
+	UBRR0H = (uint8_t)(BAUD_PRESCALLER_DOUBLESPEED_MODE >> 8);
+	UBRR0L = (uint8_t)(BAUD_PRESCALLER_DOUBLESPEED_MODE >> 0);
 	UCSR0A |= 1<<U2X0;
 #else
-	UBRR0H = (uint8_t)(BAUD_PRESCALLER_NORMAL_MODE>>8);
-	UBRR0L = (uint8_t)(BAUD_PRESCALLER_NORMAL_MODE);
+	UBRR0H = (uint8_t)(BAUD_PRESCALLER_NORMAL_MODE >> 8);
+	UBRR0L = (uint8_t)(BAUD_PRESCALLER_NORMAL_MODE >> 0);
 	UCSR0A &= ~(1<<U2X0);
 #endif
 
-	UCSR0B = (1 << RXEN0) | (1 << TXEN0);
-	/* UsartCharacterSiZe - 8-bit */
-	UCSR0C = (1 << UCSZ01) | (1 << UCSZ00);
+	/*
+	 * UCSROA is a status register only (apart from U2Xn):
+	 * • Bit 7 – RXCn: USART Receive Complete
+	 * • Bit 6 – TXCn: USART Transmit Complete
+	 * • Bit 5 – UDREn: USART Data Register Empty
+	 * • Bit 4 – FEn: Frame Error
+	 * • Bit 3 – DORn: Data OverRun/
+	 * • Bit 2 – UPEn: USART Parity Error
+	 * • Bit 1 – U2Xn: Double the USART Transmission Speed
+	 * • Bit 0 – MPCMn: Multi-processor Communication Mode
+	 */
+
+	UCSR0B  = (0<<RXCIE0)  |   /* Disable ReceiveCompleteInteruptEnable */
+			  (0<<TXCIE0)  |   /* Disable TransmitCompleteInteruptEnable */
+			  (0<<UDRIE0)  |   /* Disable UsartDataRegisterEmptyInteruptEnable */
+			  (1<<RXEN0)   |   /* Enable RX */
+			  (1<<TXEN0)   |   /* Enable TX */
+			  (0<<UCSZ02)  ;   /* Clear the 9-bit character mode bit */
+
+	UCSR0C =  (0<<UMSEL01) | (0<<UMSEL00) |  /* UsartModeSelect - Asynchronous (00=Async, 01=Sync, 10=Reserved, 11=Master SPI) */
+			  (0<<UPM01)   | (0<<UPM00)   |  /* UsartParatyMode - Disabled  (00=Off, 01=Reserved, 10=Even, 11=Odd) */
+			  (0<<USBS0)   |                 /* UsartStopBitSelect (0=1 Stop bit, 1 = 2Stop Bits) */
+			  (1<<UCSZ01)  | (1<<UCSZ00);    /* UsartCharacterSiZe  - 8-bit (00=5Bit, 01=6Bit, 10=7Bit, 11=8Bit, must be 11 for 9-bit) */
 }
 
 /* Directly read a byte from the UART0 */
