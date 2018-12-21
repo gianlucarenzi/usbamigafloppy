@@ -1,10 +1,10 @@
 USB floppy controller for Amiga disks
 =====================================
 
-This is a USB floppy disk controller, for reading and writing amiga disks. In
+This is a USB floppy disk controller, for reading and writing amiga ADF disks. In
 conjunction with the accompanying `amigafloppy` program, it allows archiving
 amiga disks as ADF disk images, or writing ADF disk images back to disks, to use
-with an Amiga computer.
+with an Amiga computer (real or emulated).
 
 The firmware for this controller is based on the ArduinoFloppyDiskReader
 project by Rob Smith (https://github.com/RobSmithDev/ArduinoFloppyDiskReader),
@@ -18,7 +18,7 @@ programs from Rob's project, if you prefer.
 Directory structure:
 
   * `hw` - hardware: kicad files and pdf schematics.
-  * `fw` - firmware for the AVR microcontroller.
+  * `fw` - firmware for the AVR microcontroller and FTDI chips
   * `amigafloppy` - host program for reading/writing ADF images.
 
 Note: The `amigafloppy` host program is not completed yet. And it's not a high
@@ -29,7 +29,8 @@ first. Until then, please use `AmigaFloppyReader` or `AmigaFloppyReaderWin`.
 
 Hardware License
 ----------------
-Copyright (C) 2018 John Tsiombikas <nuclear@member.fsf.org>
+Copyright (C) 2018/2019 Gianluca Renzi <gianlucarenzi@eurek.it> <icjtqr@gmail.com>
+Original work Copyright (C) 2018 John Tsiombikas <nuclear@member.fsf.org>
 
 The hardware of this project is released as free/open hardware under the
 Creative Commons Attribution Share-Alike license. See `LICENSE.hw` for details.
@@ -39,6 +40,8 @@ Firmware License
 Copyright (C) 2017 Rob Smith <rob@robsmithdev.co.uk>
 
 Copyright (C) 2018 John Tsiombikas <nuclear@member.fsf.org>
+
+Copyright (C) 2018/2019 Gianluca Renzi <gianlucarenzi@eurek.it> <icjtqr@gmail.com>
 
 The microcontroller firmware of this project is released as free software,
 under the terms of the GNU General Public License v3, or later.  See
