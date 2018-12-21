@@ -4,7 +4,7 @@ bin = avrfloppy
 hex = $(bin).hex
 eep = $(bin).eep
 
-mcu_gcc = atmega88
+mcu_gcc = atmega88pa
 mcu_dude = m88
 mcu_minipro = ATMEGA88A
 
@@ -28,11 +28,11 @@ $(eep): $(bin)
 
 .PHONY: fuses
 fuses:
-	avrdude -c usbtiny -p $(mcu_dude) -U lfuse:w:0xe6:m -U hfuse:w:0xdf:m -U efuse:w:0xf9:m
+	avrdude -c usbasp-clone -p $(mcu_dude) -U lfuse:w:0xe7:m -U hfuse:w:0xdf:m -U efuse:w:0xf9:m
 
 .PHONY: program
 program: $(hex)
-	avrdude -c usbtiny -p $(mcu_dude) -e -U flash:w:$(hex)
+	avrdude -c usbasp-clone -p $(mcu_dude) -e -U flash:w:$(hex)
 
 .PHONY: burn
 burn:
