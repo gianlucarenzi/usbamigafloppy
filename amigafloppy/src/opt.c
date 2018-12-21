@@ -50,6 +50,7 @@ int init_options(int argc, char **argv)
 	opt.devfile = DEV_DEFAULT;
 	opt.verbose = 1;
 	opt.retries = RETRIES_DEFAULT;
+	opt.baudrate = 2000000;
 
 	load_config();
 
@@ -85,6 +86,10 @@ int init_options(int argc, char **argv)
 
 				case 's':
 					opt.verbose = 0;
+					break;
+
+				case 'b':
+					opt.baudrate = strtoul(argv[++i], NULL, 10);
 					break;
 
 				case 'h':
@@ -129,6 +134,7 @@ static void print_usage(const char *argv0)
 	printf(" -d <device>  specify which device to use (default: " DEV_DEFAULT ")\n");
 	printf(" -s           run silent, print only errors\n");
 	printf(" -r <retries> how many retries to attempt while reading (default: %d)\n", RETRIES_DEFAULT);
+	printf(" -b           specify baud rate (default: 2000000)\n");
 	printf(" -h           print help and exit\n");
 }
 
