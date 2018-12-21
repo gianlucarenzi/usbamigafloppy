@@ -68,14 +68,16 @@ static uint32_t checksum(void *buf, int size);
 
 static int dev_fd = -1;
 
-int init_device(const char *devname)
+int init_device(const char *devname, int baudrate)
 {
 	int major, minor;
 
-	if((dev_fd = ser_open(devname, 2000000, SER_HWFLOW)) == -1) {
+	if((dev_fd = ser_open(devname, baudrate, SER_HWFLOW)) == -1) {
 		return -1;
 	}
 	ser_nonblock(dev_fd);
+
+	ser_flush(dev_fd);
 
 	if(get_fw_version(&major, &minor) == -1) {
 		ser_close(dev_fd);
