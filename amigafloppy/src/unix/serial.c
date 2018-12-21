@@ -148,12 +148,46 @@ int ser_wait(int fd, long msec)
 
 int ser_write(int fd, const void *buf, int count)
 {
-	return write(fd, buf, count);
+	int err;
+	int rval;
+
+	for (;;)
+	{
+		rval = write(fd, buf, count);
+		if (rval < 0)
+		{
+			err = errno;
+			if (err == EINTR || err == EAGAIN)
+				continue;
+			else
+				break;
+		}
+		else
+			break;
+	}
+	return rval;
 }
 
 int ser_read(int fd, void *buf, int count)
 {
-	return read(fd, buf, count);
+	int err;
+	int rval;
+
+	for (;;)
+	{
+		rval = read(fd, buf, count);
+		if (rval < 0)
+		{
+			err = errno;
+			if (err == EINTR || err == EAGAIN)
+				continue;
+			else
+				break;
+		}
+		else
+			break;
+	}
+	return rval;
 }
 
 void ser_printf(int fd, const char *fmt, ...)
@@ -220,4 +254,13 @@ static int baud_id(int baud)
 		break;
 	}
 	return -1;
+}
+
+void ser_flush(int fd)
+{
+	if (fd >= 0)
+		tcflush(fd, TCIFLUSH);
+
+	if (fd >= 0)
+		tcflush(fd, TCOFLUSH);
 }
