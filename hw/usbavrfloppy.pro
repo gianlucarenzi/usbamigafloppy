@@ -1,4 +1,4 @@
-update=Sat 22 Dec 2018 18:51:13 CET
+update=Sun 23 Dec 2018 20:20:11 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -60,8 +60,7 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=ftdi
-LibName32=usbavrfloppy
-LibName33=switches
+LibName32=switches
 [schematic_editor]
 version=1
 PageLayoutDescrFile=

@@ -3,7 +3,7 @@
   (general
     (links 165)
     (no_connects 0)
-    (area 104.089999 58.369999 200.710001 128.955001)
+    (area 83.948001 47.95 219.455 143.670001)
     (thickness 1.6)
     (drawings 54)
     (tracks 921)
@@ -251,7 +251,7 @@
     (at 137.16 68.58 90)
     (descr "28-Lead Plastic Shrink Small Outline (SS)-5.30 mm Body [SSOP] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "SSOP 0.65")
-    (path /5A95DEF7)
+    (path /5C1FFB63)
     (attr smd)
     (fp_text reference U2 (at 6.096 -0.254 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))

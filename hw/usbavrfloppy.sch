@@ -1,5 +1,4 @@
 EESchema Schematic File Version 2
-LIBS:usbavrfloppy-rescue
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -30,32 +29,30 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:ftdi
-LIBS:usbavrfloppy
 LIBS:switches
-LIBS:usbavrfloppy-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title "USB amiga floppy controller"
+Title "USB AVR Amiga Floppy Controller"
 Date "2018-03-01"
 Rev "1"
-Comp ""
+Comp "RetroBit Lab"
 Comment1 "Creative Commons Attribution Share-Alike (CC BY-SA)"
 Comment2 "Original Concepts Copyright (C) John Tsiombikas 2018"
 Comment3 "Modified by Gianluca Renzi <icjtqr@gmail.com>"
 Comment4 "Added level shifter for next gen controller"
 $EndDescr
 $Comp
-L floppy_conn J2
+L CONN_02X17 J2
 U 1 1 5A96F2AA
-P 9850 2200
-F 0 "J2" H 9850 3100 50  0000 C CNN
-F 1 "floppy_conn" V 9850 2200 50  0000 C CNN
-F 2 "Connect:IDC_Header_Straight_34pins" H 9850 1100 50  0001 C CNN
-F 3 "" H 9850 1100 50  0001 C CNN
-	1    9850 2200
+P 10050 2200
+F 0 "J2" H 10050 3100 50  0000 C CNN
+F 1 "floppy_conn" V 10050 2200 50  0000 C CNN
+F 2 "Connect:IDC_Header_Straight_34pins" H 10050 1100 50  0001 C CNN
+F 3 "" H 10050 1100 50  0001 C CNN
+	1    10050 2200
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -94,12 +91,12 @@ $EndComp
 $Comp
 L CONN_01X02 J1
 U 1 1 5A96F78C
-P 8900 1600
-F 0 "J1" H 8900 1750 50  0000 C CNN
-F 1 "bothdrv" V 9000 1600 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 8900 1600 50  0001 C CNN
-F 3 "" H 8900 1600 50  0001 C CNN
-	1    8900 1600
+P 9300 1600
+F 0 "J1" H 9300 1750 50  0000 C CNN
+F 1 "bothdrv" V 9400 1600 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 9300 1600 50  0001 C CNN
+F 3 "" H 9300 1600 50  0001 C CNN
+	1    9300 1600
 	0    -1   -1   0   
 $EndComp
 Text Label 3900 3300 0    60   ~ 0
@@ -120,8 +117,8 @@ Text Label 3900 3200 0    60   ~ 0
 ~mRDATA
 Text Label 3900 1300 0    60   ~ 0
 ~mHSEL
-NoConn ~ 9400 3000
-NoConn ~ 9400 1400
+NoConn ~ 9800 3000
+NoConn ~ 9800 1400
 Text Label 3900 3000 0    60   ~ 0
 ~mINDEX
 Text Label 4000 2800 0    60   ~ 0
@@ -133,12 +130,12 @@ CTS
 $Comp
 L GND #PWR03
 U 1 1 5A971B5E
-P 3150 6100
-F 0 "#PWR03" H 3150 5850 50  0001 C CNN
-F 1 "GND" H 3150 5950 39  0000 C CNN
-F 2 "" H 3150 6100 50  0001 C CNN
-F 3 "" H 3150 6100 50  0001 C CNN
-	1    3150 6100
+P 3250 6100
+F 0 "#PWR03" H 3250 5850 50  0001 C CNN
+F 1 "GND" H 3250 5950 39  0000 C CNN
+F 2 "" H 3250 6100 50  0001 C CNN
+F 3 "" H 3250 6100 50  0001 C CNN
+	1    3250 6100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -461,17 +458,17 @@ Wire Wire Line
 	10200 4450 10200 4550
 Connection ~ 10200 4550
 Wire Wire Line
-	8950 1800 9400 1800
+	9350 1800 9800 1800
 Wire Wire Line
-	9400 2000 9250 2000
+	9800 2000 9650 2000
 Wire Wire Line
-	9250 2000 9250 1800
-Connection ~ 9250 1800
+	9650 2000 9650 1800
+Connection ~ 9650 1800
 Wire Wire Line
-	8850 1900 9400 1900
+	9250 1900 9800 1900
 Wire Wire Line
-	9200 2100 9200 1900
-Connection ~ 9200 1900
+	9600 2100 9600 1900
+Connection ~ 9600 1900
 Wire Wire Line
 	3900 2900 4600 2900
 Wire Wire Line
@@ -485,10 +482,9 @@ Wire Wire Line
 Wire Wire Line
 	4700 4400 4250 4400
 Wire Wire Line
-	4250 4700 4500 4700
+	4500 4700 4250 4700
 Wire Wire Line
-	4500 4700 4500 2250
-Connection ~ 3600 4100
+	4500 2250 4500 4700
 Wire Wire Line
 	2550 4400 2650 4400
 Wire Wire Line
@@ -531,7 +527,7 @@ Connection ~ 10300 2700
 Connection ~ 10300 2800
 Connection ~ 10300 2900
 Connection ~ 10300 3000
-Connection ~ 9200 2100
+Connection ~ 9600 2100
 Wire Wire Line
 	4200 1700 4200 1450
 Wire Wire Line
@@ -1103,49 +1099,49 @@ Text Label 5550 7150 2    60   ~ 0
 ~mDIR
 Text Label 4050 7150 2    60   ~ 0
 ~mSTEP
-Text Label 9400 2600 2    60   ~ 0
+Text Label 9800 2600 2    60   ~ 0
 ~TRK0
 Text Label 6400 1450 0    60   ~ 0
 ~TRK0
-Text Label 9400 2900 2    60   ~ 0
+Text Label 9800 2900 2    60   ~ 0
 ~SIDE1
 Text Label 8250 1450 0    60   ~ 0
 ~SIDE1
-Text Label 9400 2500 2    60   ~ 0
+Text Label 9800 2500 2    60   ~ 0
 ~WGATE
 Text Label 6400 2800 0    60   ~ 0
 ~WGATE
 Text Label 8300 2800 0    60   ~ 0
 ~WPROT
-Text Label 9400 2700 2    60   ~ 0
+Text Label 9800 2700 2    60   ~ 0
 ~WPROT
-Text Label 9400 1700 2    60   ~ 0
+Text Label 9800 1700 2    60   ~ 0
 ~INDEX
 Wire Wire Line
-	9000 2100 9400 2100
+	9400 2100 9800 2100
 Wire Wire Line
-	8850 1900 8850 1800
+	9250 1900 9250 1800
 Text Label 6400 4150 0    60   ~ 0
 ~INDEX
-Text Label 9400 2400 2    60   ~ 0
+Text Label 9800 2400 2    60   ~ 0
 ~WDATA
 Text Label 8200 4150 0    60   ~ 0
 ~WDATA
-Text Label 9400 2800 2    60   ~ 0
+Text Label 9800 2800 2    60   ~ 0
 ~RDATA
 Text Label 6400 5500 0    60   ~ 0
 ~RDATA
-Text Label 9000 2100 2    60   ~ 0
+Text Label 9400 2100 2    60   ~ 0
 ~MOTEB
 Text Label 8250 5500 0    60   ~ 0
 ~MOTEB
 Text Label 6400 7150 0    60   ~ 0
 ~DIR
-Text Label 9400 2200 2    60   ~ 0
+Text Label 9800 2200 2    60   ~ 0
 ~DIR
 Text Label 4900 7150 0    60   ~ 0
 ~STEP
-Text Label 9400 2300 2    60   ~ 0
+Text Label 9800 2300 2    60   ~ 0
 ~STEP
 Text GLabel 2000 1000 1    60   Input ~ 0
 Vcc_MCU
@@ -1250,7 +1246,7 @@ Wire Wire Line
 	4750 1600 4750 1900
 Connection ~ 4750 1600
 Wire Wire Line
-	1450 2950 950  2950
+	950  2950 1450 2950
 Wire Wire Line
 	1200 2950 1200 2850
 Text GLabel 10600 5300 2    60   Input ~ 0
@@ -1285,7 +1281,6 @@ Text GLabel 1200 4050 0    60   Input ~ 0
 Vcc_FLOPPY
 Wire Wire Line
 	10600 5500 10600 5650
-Connection ~ 10300 3050
 Wire Wire Line
 	950  3250 1450 3250
 Connection ~ 1200 3250
@@ -1295,17 +1290,6 @@ Text GLabel 1300 4900 3    60   Output ~ 0
 VCC_USB
 Text GLabel 1100 1950 0    60   Input ~ 0
 VCC_USB
-$Comp
-L FT232RL-RESCUE-usbavrfloppy U2
-U 1 1 5A95DEF7
-P 3450 5100
-F 0 "U2" H 2800 6000 50  0000 L CNN
-F 1 "FT232RL" H 3850 6000 50  0000 L CNN
-F 2 "Housings_SSOP:SSOP-28_5.3x10.2mm_Pitch0.65mm" H 3450 5100 50  0001 C CNN
-F 3 "" H 3450 5100 50  0001 C CNN
-	1    3450 5100
-	1    0    0    -1  
-$EndComp
 Text GLabel 2650 5800 0    60   Input ~ 0
 GND
 Wire Wire Line
@@ -1506,12 +1490,12 @@ Wire Wire Line
 $Comp
 L GND #PWR031
 U 1 1 5BE7A7E8
-P 3350 6100
-F 0 "#PWR031" H 3350 5850 50  0001 C CNN
-F 1 "GND" H 3350 5950 39  0000 C CNN
-F 2 "" H 3350 6100 50  0001 C CNN
-F 3 "" H 3350 6100 50  0001 C CNN
-	1    3350 6100
+P 3450 6100
+F 0 "#PWR031" H 3450 5850 50  0001 C CNN
+F 1 "GND" H 3450 5950 39  0000 C CNN
+F 2 "" H 3450 6100 50  0001 C CNN
+F 3 "" H 3450 6100 50  0001 C CNN
+	1    3450 6100
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1528,20 +1512,16 @@ $EndComp
 $Comp
 L GND #PWR033
 U 1 1 5BE7A95A
-P 3750 6100
-F 0 "#PWR033" H 3750 5850 50  0001 C CNN
-F 1 "GND" H 3750 5950 39  0000 C CNN
-F 2 "" H 3750 6100 50  0001 C CNN
-F 3 "" H 3750 6100 50  0001 C CNN
-	1    3750 6100
+P 3650 6100
+F 0 "#PWR033" H 3650 5850 50  0001 C CNN
+F 1 "GND" H 3650 5950 39  0000 C CNN
+F 2 "" H 3650 6100 50  0001 C CNN
+F 3 "" H 3650 6100 50  0001 C CNN
+	1    3650 6100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3400 4100 3600 4100
-Wire Wire Line
-	3650 3950 3600 3950
-Wire Wire Line
-	3600 3950 3600 4100
+	3550 3950 3650 3950
 Text GLabel 1300 4050 2    60   Input ~ 0
 Vcc_MCU
 Wire Wire Line
@@ -1606,4 +1586,22 @@ NoConn ~ 9800 850
 NoConn ~ 10150 850 
 Text Notes 600  5200 1    60   Italic 0
 Need to be replaced if SoC is not 5V tolerant
+$Comp
+L FT232RL U2
+U 1 1 5C1FFB63
+P 3450 5100
+F 0 "U2" H 2800 6000 50  0000 L CNN
+F 1 "FT232RL" H 3850 6000 50  0000 L CNN
+F 2 "Housings_SSOP:SSOP-28_5.3x10.2mm_Pitch0.65mm" H 3450 5100 50  0001 C CNN
+F 3 "" H 3450 5100 50  0000 C CNN
+	1    3450 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 4100 3350 4100
+Wire Wire Line
+	3550 3950 3550 4100
+Connection ~ 3550 4100
+NoConn ~ 9800 1500
+NoConn ~ 9800 1600
 $EndSCHEMATC
