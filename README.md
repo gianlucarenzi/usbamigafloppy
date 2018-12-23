@@ -5,7 +5,7 @@ This is a USB floppy disk controller, for reading and writing amiga ADF disks. I
 conjunction with the ArduinoFloppyDiskReader. The .zip file containing the executable
 usable in Windows OS can be downloaded from:
 
-https://github.com/gianlucarenzi/ArduinoFloppyDiskReader/ArduinoFloppyReader/ArduinoFloppyReaderWin/res/ADFReaderWriter22.zip
+https://github.com/gianlucarenzi/ArduinoFloppyDiskReader/blob/master/ArduinoFloppyReader/ArduinoFloppyReaderWin/res/ADFReaderWriter22.zip
 
 It allows archiving amiga disks as ADF disk images, or writing ADF disk images back to disks, to use
 with an Amiga computer (real or emulated).
