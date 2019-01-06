@@ -22,6 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include <stdint.h>
 #include <assert.h>
 #include <arpa/inet.h>
+#include <termios.h>
 #include "dev.h"
 #include "serial.h"
 #include "opt.h"
@@ -77,8 +78,6 @@ int init_device(const char *devname, int baudrate)
 	}
 	ser_nonblock(dev_fd);
 
-	ser_flush(dev_fd);
-
 	if(get_fw_version(&major, &minor) == -1) {
 		ser_close(dev_fd);
 		dev_fd = -1;
@@ -99,6 +98,7 @@ void shutdown_device(void)
 int wait_response(void)
 {
 	char res;
+	printf("WAIT\n");
 
 	if(dev_fd < 0) return -1;
 
@@ -110,6 +110,7 @@ int wait_response(void)
 		fprintf(stderr, "failed to read response from device\n");
 		return -1;
 	}
+	printf("WAIT RETURNS: %d\n", res == '1' ? 1 : 0);
 	return res == '1' ? 1 : 0;
 }
 
@@ -134,7 +135,6 @@ int get_fw_version(int *major, int *minor)
 
 	if(ser_read(dev_fd, buf, 4) != 4) {
 		fprintf(stderr, "failed to read firmware version\n");
-		return -1;
 	}
 
 	if(sscanf(buf, "V%d.%d", major, minor) != 2) {
