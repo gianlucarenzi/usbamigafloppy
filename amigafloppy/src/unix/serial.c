@@ -148,45 +148,16 @@ int ser_wait(int fd, long msec)
 
 int ser_write(int fd, const void *buf, int count)
 {
-	int err;
-	int rval;
-
-	for (;;)
-	{
-		rval = write(fd, buf, count);
-		if (rval < 0)
-		{
-			err = errno;
-			if (err == EINTR || err == EAGAIN)
-				continue;
-			else
-				break;
-		}
-		else
-			break;
-	}
-	return rval;
+	int i;
+	unsigned char *ptr = (unsigned char *) buf;
+	return write(fd, buf, count);
 }
 
 int ser_read(int fd, void *buf, int count)
 {
-	int err;
-	int rval;
-
-	for (;;)
-	{
-		rval = read(fd, buf, count);
-		if (rval < 0)
-		{
-			err = errno;
-			if (err == EINTR || err == EAGAIN)
-				continue;
-			else
-				break;
-		}
-		else
-			break;
-	}
+	int i, retval;
+	unsigned char *ptr = (unsigned char *) buf;
+	retval = read(fd, buf, count);
 	return rval;
 }
 
