@@ -1,4 +1,4 @@
-update=Sun 20 Jan 2019 20:19:05 CET
+update=Mon 11 Feb 2019 23:00:28 CET
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,16 +25,6 @@ version=1
 NetIExt=net
 [general]
 version=1
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=Pcbnew
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [eeschema]
 version=1
 LibDir=../../../../packages/kicad/kicad-symbols;../../../../packages/kicad/kicad-packages3D;../../../../packages/kicad/kicad-footprints
@@ -256,3 +246,13 @@ LibName214=Transistor_IGBT
 LibName215=Triac_Thyristor
 LibName216=Valve
 LibName217=Video
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Pcbnew
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
