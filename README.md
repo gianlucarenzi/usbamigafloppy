@@ -39,6 +39,7 @@ Rendered Images
 Hardware License
 ================
 Copyright (C) 2018/2019 Gianluca Renzi <gianlucarenzi@eurek.it> <icjtqr@gmail.com>
+
 Original work Copyright (C) 2018 John Tsiombikas <nuclear@member.fsf.org>
 
 The hardware of this project is released as free/open hardware under the
@@ -61,5 +62,5 @@ Software License
 Copyright (C) 2018 John Tsiombikas <nuclear@member.fsf.org>
 
 The host software (amigafloppy tool) is released as free software, under the
-terms of the GNU General Public License v3, or later. See `LICENSE.sw` for
+terms of the GNU General Public License v3, or later. See `LICENSE.sw` or licence.txt for
 details.
