@@ -30,16 +30,23 @@ GNU/Linux. I'd like to complete it at some stage, but I can't say when that will
 happen. Contributions are of course welcome, but please coordinate with me
 first. Until then, please use `AmigaFloppyReader` or `AmigaFloppyReaderWin`.
 
+Rendered Images
+===============
+# Front[![](hw/images/waffle-f.png "Board Front")](#features)
+# Back[![](hw/images/waffle-b.png "Board Back")](#features)
+# Overall[![](hw/images/waffle.png "Board Overall")](#features)
+
 Hardware License
-----------------
+================
 Copyright (C) 2018/2019 Gianluca Renzi <gianlucarenzi@eurek.it> <icjtqr@gmail.com>
+
 Original work Copyright (C) 2018 John Tsiombikas <nuclear@member.fsf.org>
 
 The hardware of this project is released as free/open hardware under the
 Creative Commons Attribution Share-Alike license. See `LICENSE.hw` for details.
 
 Firmware License
-----------------
+================
 Copyright (C) 2017 Rob Smith <rob@robsmithdev.co.uk>
 
 Copyright (C) 2018 John Tsiombikas <nuclear@member.fsf.org>
@@ -51,9 +58,9 @@ under the terms of the GNU General Public License v3, or later.  See
 `LICENSE.sw` for details.
 
 Software License
-----------------
+================
 Copyright (C) 2018 John Tsiombikas <nuclear@member.fsf.org>
 
 The host software (amigafloppy tool) is released as free software, under the
-terms of the GNU General Public License v3, or later. See `LICENSE.sw` for
+terms of the GNU General Public License v3, or later. See `LICENSE.sw` or licence.txt for
 details.
