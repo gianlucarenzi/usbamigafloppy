@@ -11,7 +11,7 @@ mcu_minipro = ATMEGA88A
 CC = avr-gcc
 OBJCOPY = avr-objcopy
 
-CFLAGS = -Os -pedantic -Wall -mmcu=$(mcu_gcc) -DF_CPU=16000000
+CFLAGS = -O3 -pedantic -Wall -mmcu=$(mcu_gcc) -DF_CPU=16000000
 LDFLAGS = -Wl,-Map,$(bin).map -mmcu=$(mcu_gcc)
 
 .PHONY: all

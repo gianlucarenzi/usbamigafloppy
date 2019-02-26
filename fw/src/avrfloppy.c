@@ -474,30 +474,23 @@ static int goto_track_x(void)
 static unsigned char SERIAL_BUFFER[SERIAL_BUFFER_SIZE];
 
 
-#define CHECK_SERIAL() \
-	do { \
-		if(UCSR0A & (1 << RXC0)) { \
-			SERIAL_BUFFER[serial_write_pos++] = UDR0; \
-			serial_bytes_in_use++; \
-		} else if(serial_bytes_in_use < SERIAL_BUFFER_START) { \
-			CTS_PORT &= ~CTS_BIT; \
-			CTS_PORT |= CTS_BIT; \
-		} \
-	} while(0)
-
+#define CHECK_SERIAL() if (UCSR0A & (1 << RXC0)) { \
+		SERIAL_BUFFER[serial_write_pos++] = UDR0; \
+		serial_bytes_in_use++; \
+	} else if(serial_bytes_in_use < SERIAL_BUFFER_START) { \
+		CTS_PORT &= ~CTS_BIT; \
+		CTS_PORT |= CTS_BIT; \
+	}
 
 
 /* Small Macro to write a '1' pulse to the drive if a bit is set based on the supplied bitmask */
-#define WRITE_BIT(value, bitmask) \
-	do { \
-		if(current_byte & bitmask)  { \
-			while(TCNT2 < value); \
-			WDATA_PORT &= ~WDATA_BIT; \
-		 } else { \
-			 while(TCNT2 < value); \
-			WDATA_PORT |= WDATA_BIT; \
-		} \
-	} while(0)
+#define WRITE_BIT(value, bitmask) if (current_byte & bitmask)  { \
+		while(TCNT2 < value); \
+		WDATA_PORT &= ~WDATA_BIT; \
+	 } else { \
+		 while(TCNT2 < value); \
+		WDATA_PORT |= WDATA_BIT; \
+	}
 
 /* Write a track to disk from the UART -
  * the data should be pre-MFM encoded raw track data where '1's are the
