@@ -94,9 +94,13 @@ static int current_track; /* The current track that the head is over */
 static int drive_enabled; /* If the drive has been switched on or not */
 static int in_write_mode; /* If we're in WRITING mode or not */
 
+static	char version[4]; /* it must be 4 characters */
+
 int main(void)
 {
 	setup();
+	sprintf(version, VERSION_STR);
+
 	for(;;) {
 		loop();
 	}
@@ -161,9 +165,7 @@ static void loop(void)
 {
 	unsigned char command;
 	int i;
-	char version[4]; /* it must be 4 characters */
 
-	sprintf(version, VERSION_STR);
 	CTS_PORT &= ~CTS_BIT;		/* Allow data incoming */
 	WGATE_PORT |= WGATE_BIT;   /* always turn writing off */
 
@@ -499,9 +501,11 @@ static unsigned char SERIAL_BUFFER[SERIAL_BUFFER_SIZE];
 static void write_track_from_uart(void)
 {
 	unsigned int i, serial_bytes_in_use;
-	unsigned char high_byte, low_byte, wait_for_index, current_byte;
+	unsigned char high_byte, low_byte, wait_for_index;
 	unsigned char serial_read_pos, serial_write_pos;
 	unsigned short num_bytes;
+	register unsigned int a;
+	register unsigned char current_byte;
 
 	/* Configure timer 2 just as a counter in NORMAL mode */
 	TCCR2A = 0;			/* No physical output port pins and normal operation */
@@ -561,7 +565,7 @@ static void write_track_from_uart(void)
 	/* ideally we'd use an ISR here, but there's just too much overhead even with naked
 	 * ISRs to do this (preserving registers, etc)
 	 */
-	for(i=0; i<num_bytes; i++) {
+	for(a=0; a<num_bytes; a++) {
 		/* Should never happen, but we'll wait here if theres no data */
 		if(serial_bytes_in_use < 1) {
 			/* This can't happen and causes a write failure */
