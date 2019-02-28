@@ -237,7 +237,7 @@ U 1 1 5A96F2AA
 P 10050 2200
 F 0 "J2" H 10050 3100 50  0000 C CNN
 F 1 "floppy_conn" V 10050 2200 50  0000 C CNN
-F 2 "Connect:IDC_Header_Straight_34pins" H 10050 1100 50  0001 C CNN
+F 2 "RetroBitLab:IDC-Header_2x17_P2.54mm_Vertical_Lock" H 10050 1100 50  0001 C CNN
 F 3 "" H 10050 1100 50  0001 C CNN
 	1    10050 2200
 	-1   0    0    -1  
