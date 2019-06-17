@@ -1,5 +1,5 @@
-Drill report for /home/debian/Progetti/AMIGA/waffle-usbamigafloppy/hw/usbavrfloppy.kicad_pcb
-Created on Sun 02 Jun 2019 18:39:57 CEST
+Drill report for /home/debian/Progetti/Amiga/waffle-usbamigafloppy/hw/usbavrfloppy.kicad_pcb
+Created on lun 17 giu 2019 11:57:01 CEST
 
 Copper Layer Stackup:
     =============================================================
@@ -21,9 +21,9 @@ Drill file 'usbavrfloppy.drl' contains
     Total plated holes count 110
 
 
-Not plated through holes are merged with plated holes
+Drill file 'usbavrfloppy-NPTH.drl' contains
     unplated through holes:
     =============================================================
-    T8  0,90mm  0,035"  (2 holes)
+    T1  0,90mm  0,035"  (2 holes)
 
     Total unplated holes count 2
