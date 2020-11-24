@@ -480,11 +480,10 @@ static unsigned char SERIAL_BUFFER[SERIAL_BUFFER_SIZE];
 #define CHECK_SERIAL() if (UCSR0A & (1 << RXC0)) { \
 		SERIAL_BUFFER[serial_write_pos++] = UDR0; \
 		serial_bytes_in_use++; \
-	} \
-	if (serial_bytes_in_use < SERIAL_BUFFER_START) \
+	} else if (serial_bytes_in_use < SERIAL_BUFFER_START) {\
 		CTS_PORT &= ~CTS_BIT; \
-	else \
 		CTS_PORT |= CTS_BIT; \
+	} /
 
 /* Small Macro to write a '1' pulse to the drive if a bit is set based on the supplied bitmask */
 #define WRITE_BIT(value, bitmask) if (current_byte & bitmask)  { \
