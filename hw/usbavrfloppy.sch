@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "USB AVR Amiga Floppy Controller"
-Date "2018-03-01"
-Rev "1"
+Date "2021-03-22"
+Rev "2"
 Comp "RetroBit Lab"
 Comment1 "Creative Commons Attribution Share-Alike (CC BY-SA)"
 Comment2 "Original Concepts Copyright (C) John Tsiombikas 2018"
@@ -943,23 +943,23 @@ Text Label 5550 7150 2    60   ~ 0
 ~mDIR
 Text Label 4050 7150 2    60   ~ 0
 ~mSTEP
-Text Label 9350 2600 2    60   ~ 0
+Text Label 9350 2600 2    47   ~ 0
 ~TRK0
 Text Label 6400 1450 0    60   ~ 0
 ~TRK0
-Text Label 9350 2900 2    60   ~ 0
+Text Label 9350 2900 2    47   ~ 0
 ~SIDE1
 Text Label 8250 1450 0    60   ~ 0
 ~SIDE1
-Text Label 9350 2500 2    60   ~ 0
+Text Label 9350 2500 2    47   ~ 0
 ~WGATE
 Text Label 6400 2800 0    60   ~ 0
 ~WGATE
 Text Label 8300 2800 0    60   ~ 0
 ~WPROT
-Text Label 9350 2700 2    60   ~ 0
+Text Label 9350 2700 2    47   ~ 0
 ~WPROT
-Text Label 9350 1700 2    60   ~ 0
+Text Label 9350 1700 2    47   ~ 0
 ~INDEX
 Wire Wire Line
 	8950 2100 9150 2100
@@ -967,11 +967,11 @@ Wire Wire Line
 	8800 1900 8800 1800
 Text Label 6400 4150 0    60   ~ 0
 ~INDEX
-Text Label 9350 2400 2    60   ~ 0
+Text Label 9350 2400 2    47   ~ 0
 ~WDATA
 Text Label 8200 4150 0    60   ~ 0
 ~WDATA
-Text Label 9350 2800 2    60   ~ 0
+Text Label 9350 2800 2    47   ~ 0
 ~RDATA
 Text Label 6400 5500 0    60   ~ 0
 ~RDATA
@@ -981,11 +981,11 @@ Text Label 8250 5500 0    60   ~ 0
 ~MOTEB
 Text Label 6400 7150 0    60   ~ 0
 ~DIR
-Text Label 9350 2200 2    60   ~ 0
+Text Label 9350 2200 2    47   ~ 0
 ~DIR
 Text Label 4900 7150 0    60   ~ 0
 ~STEP
-Text Label 9350 2300 2    60   ~ 0
+Text Label 9350 2300 2    47   ~ 0
 ~STEP
 Text GLabel 2450 750  0    60   Input ~ 0
 Vcc_MCU
@@ -1804,10 +1804,6 @@ Wire Wire Line
 Wire Wire Line
 	10200 2550 10500 2550
 Wire Wire Line
-	10800 3350 10450 3350
-Wire Wire Line
-	10450 3350 10450 2650
-Wire Wire Line
 	10200 2650 10450 2650
 Wire Wire Line
 	10800 3500 10400 3500
@@ -1827,4 +1823,8 @@ Wire Wire Line
 	10300 2950 10300 3900
 Wire Wire Line
 	10300 3900 10800 3900
+Wire Wire Line
+	10450 2650 10450 3300
+Wire Wire Line
+	10450 3300 10800 3300
 $EndSCHEMATC
