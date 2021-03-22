@@ -5,13 +5,13 @@
   )
   (autoroute_settings
     (fanout off)
-    (autoroute on)
+    (eu.mihosoft.freerouting.autoroute on)
     (postroute on)
     (vias on)
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 2051)
+    (start_pass_no 5325)
     (layer_rule F.Cu
       (active on)
       (preferred_direction horizontal)
@@ -118,7 +118,11 @@
     /~INDEX /~DIR /~STEP /~WDATA /~WGATE /~TRK0 /~RDATA "/USBD-"
     /USBD+ /CTS /RXD /TXD /~mRESET /~MOTEB /~WPROT /~SIDE1
     /~mSTEP /~mTRK0 /~mWGATE /~mINDEX /~mRDATA /~mDIR /~mWDATA /~mHSEL
-    /~mMOTEN /~mWPROTECT "VCC_USB" "Net-(D2-Pad2)" "Net-(D3-Pad2)" VCC
+    /~mMOTEN /~mWPROTECT "VCC_USB" "Net-(D2-Pad2)" "Net-(D3-Pad2)" VCC "Net-(J2-Pad2)" "Net-(J2-Pad4)"
+    "Net-(J2-Pad6)" "Net-(J2-Pad34)" "Net-(J4-Pad6)" "Net-(J4-Pad8)" "Net-(J4-Pad20)" "Net-(J4-Pad7)" "Net-(J4-Pad9)" "Net-(J4-Pad11)"
+    "Net-(J4-Pad13)" "Net-(J7-Pad4)" "Net-(U1-Pad14)" "Net-(U1-Pad19)" "Net-(U1-Pad20)" "Net-(U1-Pad22)" "Net-(U1-Pad26)" "Net-(U1-Pad27)"
+    "Net-(U1-Pad28)" "Net-(U2-Pad2)" "Net-(U2-Pad3)" "Net-(U2-Pad6)" "Net-(U2-Pad9)" "Net-(U2-Pad10)" "Net-(U2-Pad12)" "Net-(U2-Pad13)"
+    "Net-(U2-Pad14)" "Net-(U2-Pad19)" "Net-(U2-Pad22)" "Net-(U2-Pad23)" "Net-(U2-Pad27)" "Net-(U2-Pad28)"
     (clearance_class "kicad_default")
     (via_rule kicad_default)
     (rule
