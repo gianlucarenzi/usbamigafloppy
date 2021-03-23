@@ -38,7 +38,7 @@ Rendered Images
 
 Hardware License
 ================
-Copyright (C) 2018/2019 Gianluca Renzi <gianlucarenzi@eurek.it> <icjtqr@gmail.com>
+Copyright (C) 2018/2021 Gianluca Renzi <gianlucarenzi@eurek.it> <icjtqr@gmail.com>
 
 Original work Copyright (C) 2018 John Tsiombikas <nuclear@member.fsf.org>
 
@@ -51,7 +51,7 @@ Copyright (C) 2017 Rob Smith <rob@robsmithdev.co.uk>
 
 Copyright (C) 2018 John Tsiombikas <nuclear@member.fsf.org>
 
-Copyright (C) 2018/2019 Gianluca Renzi <icjtqr@gmail.com>
+Copyright (C) 2018/2021 Gianluca Renzi <icjtqr@gmail.com>
 
 The microcontroller firmware of this project is released as free software,
 under the terms of the GNU General Public License v3, or later.  See
