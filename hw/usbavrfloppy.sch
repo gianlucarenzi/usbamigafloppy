@@ -1593,7 +1593,7 @@ U 1 1 607575A7
 P 10300 5400
 F 0 "CON1" H 10350 5650 50  0000 C CNN
 F 1 "Conn_02x03" H 10250 5150 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Horizontal" H 10300 5400 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x03_P2.54mm_Vertical" H 10300 5400 50  0001 C CNN
 F 3 "~" H 10300 5400 50  0001 C CNN
 	1    10300 5400
 	1    0    0    -1  
