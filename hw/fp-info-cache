@@ -1,4 +1,4 @@
-18726054460902253
+18804906860106253
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -74424,6 +74424,20 @@ Resistor Radial_Power series Radial pin pitch 7.37mm 10W length 16.1mm width 9mm
 2
 2
 RetroBitLab
+3M_Textool_240-1288-00-0602J_2x20_P2.54mm
+3M 40-pin zero insertion force socket, though-hole, row spacing 25.4 mm (1000 mils)
+THT DIP DIL ZIF 25.4mm 1000mil Socket
+0
+40
+40
+RetroBitLab
+24LC256T-E&slash_SN
+
+
+0
+8
+8
+RetroBitLab
 A1200-EXPANSION-BUS-CON_150
 
 
@@ -74473,6 +74487,13 @@ PCIexpress Bus Edge Connector
 24
 24
 RetroBitLab
+AUDIO_POT_PTV09-2020F-A502
+
+
+0
+5
+5
+RetroBitLab
 Adafruit_SSD1306
 Adafruit SSD1306 OLED 1.3 inch 128x64 I2C & SPI https://learn.adafruit.com/monochrome-oled-breakouts/downloads
 Adafruit SSD1306 OLED 1.3 inch 128x64 I2C & SPI 
@@ -74501,6 +74522,13 @@ PCIexpress Bus Edge Connector
 128
 65
 RetroBitLab
+BarrelJack_Wuerth_6941xx301002-3D
+Wuerth electronics barrel jack connector (5.5mm outher diameter, inner diameter 2.05mm or 2.55mm depending on exact order number), See: http://katalog.we-online.de/em/datasheet/6941xx301002.pdf
+connector barrel jack
+0
+3
+3
+RetroBitLab
 CONV_PES1-S5-S9-M
 
 
@@ -74522,12 +74550,131 @@ CR2013-MI2120 ILI9341 LCD Breakout
 18
 14
 RetroBitLab
+CUI_RCJ-013
+<b>DC POWER JACK</b><p>Source: DCJ0202.pdf
+
+0
+4
+4
+RetroBitLab
+CUI_SJ1-3533NG
+https://www.mouser.it/datasheet/2/670/sj1_353xn_series-1779359.pdf
+
+0
+5
+4
+RetroBitLab
+CUI_UJ2-AH-4-TH
+
+
+0
+6
+6
+RetroBitLab
 Crystal_HC49-4H_Vertical_3D
 Crystal THT HC-49-4H http://5hertz.com/pdfs/04404_D.pdf
 THT crystalHC-49-4H
 0
 2
 2
+RetroBitLab
+DIP_Socket-14_W4.3_W5.08_W7.62_W10.16_W10.9_3M_214-3339-00-0602J
+3M 14-pin zero insertion force socket, through-hole, row spacing 7.62 mm (300 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 7.62mm 300mil Socket
+0
+14
+14
+RetroBitLab
+DIP_Socket-16_W4.3_W5.08_W7.62_W10.16_W10.9_3M_216-3340-00-0602J
+3M 16-pin zero insertion force socket, through-hole, row spacing 7.62 mm (300 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 7.62mm 300mil Socket
+0
+16
+16
+RetroBitLab
+DIP_Socket-18_W4.3_W5.08_W7.62_W10.16_W10.9_3M_218-3341-00-0602J
+3M 18-pin zero insertion force socket, through-hole, row spacing 7.62 mm (300 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 7.62mm 300mil Socket
+0
+18
+18
+RetroBitLab
+DIP_Socket-20_W4.3_W5.08_W7.62_W10.16_W10.9_3M_220-3342-00-0602J
+3M 20-pin zero insertion force socket, through-hole, row spacing 7.62 mm (300 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 7.62mm 300mil Socket
+0
+20
+20
+RetroBitLab
+DIP_Socket-22_W6.9_W7.62_W10.16_W12.7_W13.5_3M_222-3343-00-0602J
+3M 22-pin zero insertion force socket, through-hole, row spacing 10.16 mm (400 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 10.16mm 400mil Socket
+0
+22
+22
+RetroBitLab
+DIP_Socket-24_W4.3_W5.08_W7.62_W10.16_W10.9_3M_224-5248-00-0602J
+3M 24-pin zero insertion force socket, through-hole, row spacing 7.62 mm (300 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 7.62mm 300mil Socket
+0
+24
+24
+RetroBitLab
+DIP_Socket-24_W11.9_W12.7_W15.24_W17.78_W18.5_3M_224-1275-00-0602J
+3M 24-pin zero insertion force socket, through-hole, row spacing 15.24 mm (600 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 15.24mm 600mil Socket
+0
+24
+24
+RetroBitLab
+DIP_Socket-28_W6.9_W7.62_W10.16_W12.7_W13.5_3M_228-4817-00-0602J
+3M 28-pin zero insertion force socket, through-hole, row spacing 10.16 mm (400 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 10.16mm 400mil Socket
+0
+28
+28
+RetroBitLab
+DIP_Socket-28_W11.9_W12.7_W15.24_W17.78_W18.5_3M_228-1277-00-0602J
+3M 28-pin zero insertion force socket, through-hole, row spacing 15.24 mm (600 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 15.24mm 600mil Socket
+0
+28
+28
+RetroBitLab
+DIP_Socket-32_W11.9_W12.7_W15.24_W17.78_W18.5_3M_232-1285-00-0602J
+3M 32-pin zero insertion force socket, through-hole, row spacing 15.24 mm (600 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 15.24mm 600mil Socket
+0
+32
+32
+RetroBitLab
+DIP_Socket-40_W11.9_W12.7_W15.24_W17.78_W18.5_3M_240-1280-00-0602J
+3M 40-pin zero insertion force socket, through-hole, row spacing 15.24 mm (600 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 15.24mm 600mil Socket
+0
+40
+40
+RetroBitLab
+DIP_Socket-40_W22.1_W22.86_W25.4_W27.94_W28.7_3M_240-3639-00-0602J
+3M 40-pin zero insertion force socket, through-hole, row spacing 25.4 mm (1000 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 25.4mm 1000mil Socket
+0
+40
+40
+RetroBitLab
+DIP_Socket-42_W11.9_W12.7_W15.24_W17.78_W18.5_3M_242-1281-00-0602J
+3M 42-pin zero insertion force socket, through-hole, row spacing 15.24 mm (600 mils), http://multimedia.3m.com/mws/media/494546O/3mtm-dip-sockets-100-2-54-mm-ts0365.pdf
+THT DIP DIL ZIF 15.24mm 600mil Socket
+0
+42
+42
+RetroBitLab
+DTC114YEBTL
+
+
+0
+3
+3
 RetroBitLab
 DUOCart_20x11
 
@@ -74823,6 +74970,13 @@ LQFP-176_24x24_Pitch0.5mm_Handsoldering
 176
 176
 RetroBitLab
+L_Wuerth_WE-PD-Typ-M-Typ-S_Handsoldering_3D
+Shielded Power Inductor, Wuerth Elektronik, WE-PD, SMT, Typ M, Typ S, Handsoldering, https://katalog.we-online.com/pbs/datasheet/744778005.pdf
+Choke Shielded Power Inductor WE-PD TypM TypS Wuerth
+0
+2
+2
+RetroBitLab
 MCP_1827S_TO-220-3_Horizontal_TabDown
 TO-220-3, Horizontal, RM 2.54mm, see https://www.vishay.com/docs/66542/to-220-1.pdf
 TO-220-3 Horizontal RM 2.54mm
@@ -74831,6 +74985,13 @@ TO-220-3 Horizontal RM 2.54mm
 3
 RetroBitLab
 MIC2075-1BM-TR
+
+
+0
+8
+8
+RetroBitLab
+MIC2075-2YM-TR
 
 
 0
@@ -74865,12 +75026,54 @@ NHD-C0220BiZ LCD
 10
 10
 RetroBitLab
+NightFall_and_RetroBit_Lab_21.7x10
+
+
+0
+0
+0
+RetroBitLab
+NightFall_and_RetroBit_Lab_21.7x10.NEG
+
+
+0
+0
+0
+RetroBitLab
+OLED-0.96-27.3mmx27.8mm-MH
+
+
+0
+11
+8
+RetroBitLab
 OLED-128O064D
 128x64 OLED display
 display oled
 0
 30
 30
+RetroBitLab
+PEC12R
+
+
+0
+7
+7
+RetroBitLab
+PIC32MX795F512H-80I&slash_PT
+
+
+0
+64
+64
+RetroBitLab
+POT_TPH_CT-9EW
+
+
+0
+3
+3
 RetroBitLab
 PSOP-14-8.75x4x1.27
 PSOP14-8.75x4-1.27
@@ -74900,6 +75103,13 @@ Through hole pin header THT 2x22 2.00mm double row
 44
 44
 RetroBitLab
+Potentiometer_Piher_PT-10-V10_Vertical_3D
+Potentiometer, vertical, Piher PT-10-V10, http://www.piher-nacesa.com/pdf/12-PT10v03.pdf
+Potentiometer vertical Piher PT-10-V10
+0
+3
+3
+RetroBitLab
 QFP50P1200X1200X120-64N
 
 
@@ -74921,12 +75131,26 @@ RJ10 4P4C
 6
 5
 RetroBitLab
+ROCKER_SW_DPDT_6_DPM2022
+
+
+0
+6
+6
+RetroBitLab
 RetrobitLab_Rev_SilkScreen
 
 
 0
 0
 0
+RetroBitLab
+SCART
+SCART socket, Tyco P/N 1483465-1
+
+0
+21
+21
 RetroBitLab
 SOP-32L-20.5x11.30-1.27mm
 
@@ -74973,6 +75197,13 @@ RetroBitLab
 SW_Cherry_MX1A_1.25u_Plate_3d
 Cherry MX keyswitch, MX1A, 1.25u, plate mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
 cherry mx keyswitch MX1A 1.25u plate
+0
+2
+2
+RetroBitLab
+SW_Cherry_MX1A_1.50u_ATARI_XE_PCB_3d
+Cherry MX keyswitch, MX1A, 1.50u, ATARI_XE, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+cherry mx keyswitch MX1A 1.50u ATARI_XE PCB
 0
 2
 2
@@ -75075,6 +75306,13 @@ cherry mx keyswitch MX1A 6.25u plate
 2
 2
 RetroBitLab
+SW_Cherry_MX1A_9u_PCB_3d
+Cherry MX keyswitch, MX1A, 9u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
+cherry mx keyswitch MX1A 9u PCB
+0
+2
+2
+RetroBitLab
 SW_Cherry_MX1A_ISOEnter_PCB_3d
 Cherry MX keyswitch, MX1A, ISO Enter, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
 cherry mx keyswitch MX1A ISO enter PCB
@@ -75095,6 +75333,13 @@ SMD DIP Switch SPST Slide 8.61mm 338mil SMD
 0
 6
 6
+RetroBitLab
+SW_SPDT_CK-JS102011SAQN-3D
+Sub-miniature slide switch, right-angle, http://www.ckswitches.com/media/1422/js.pdf
+switch spdt
+0
+5
+5
 RetroBitLab
 SW_SPST_FSMSM_3D
 http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&DocNm=1437566-3&DocType=Customer+Drawing&DocLang=English
@@ -75180,6 +75425,20 @@ USB USB_B USB_Mini_Large_Pads USB_Mini connector
 9
 6
 RetroBitLab
+USB_PLUG_15x15mm
+
+
+0
+0
+0
+RetroBitLab
+USB_PLUG_15x15mm_REV
+
+
+0
+0
+0
+RetroBitLab
 Vertical_IDE_44_Pins_2x22_1.27_PCB
 
 
@@ -75193,6 +75452,13 @@ LCD 16x2 Alphanumeric 16pin
 0
 20
 16
+RetroBitLab
+Wells_648-0482211SA01
+https://www.farnell.com/cad/316865.pdf?_ga=2.37208032.177107060.1530611323-249019997.1498114824
+48pin TSOP Socket
+0
+48
+48
 RetroBitLab
 Xilinx-XC9572XL-VQ64
 
@@ -75348,6 +75614,48 @@ c64_ready_16mm_REV
 0
 0
 RetroBitLab
+din-5
+Din 5 (MIDI), Pro Signal P/N PSG03463
+
+0
+7
+6
+RetroBitLab
+jack_3.5_pj313d-smt
+3.5mm jack, HK RTL PJ313D
+
+0
+6
+3
+RetroBitLab
+jack_3.5_sj1-3513-smt
+3.5mm jack, CUI SJ1-3513-SMT
+
+0
+3
+3
+RetroBitLab
+jack_3.5_sj1-3514-smt
+3.5mm jack, CUI SJ1-3514-SMT
+
+0
+4
+4
+RetroBitLab
+jack_3.5_sj1-3515-smt
+3.5mm jack, CUI SJ1-3515-SMT
+
+0
+5
+5
+RetroBitLab
+jack_3.5_vert_lje0352-4r
+Vertical 3.5mm jack, Lih Sheng LJE0352-4R
+
+0
+4
+4
+RetroBitLab
 mario_SilkScreen_15x13
 
 
@@ -75382,6 +75690,41 @@ Micro SD
 0
 14
 11
+RetroBitLab
+minidin-8
+MiniDin 8 (S-Video), Tyco P/N 1734096-1
+
+0
+11
+11
+RetroBitLab
+rca_black
+RCA Audio connector, black, Pro Signal p/n PSG01544
+rca, audio
+0
+3
+2
+RetroBitLab
+rca_red
+RCA Audio connector, red, Pro Signal p/n PSG01545
+rca, audio
+0
+3
+2
+RetroBitLab
+rca_white
+RCA Audio connector, white, Pro Signal p/n PSG01546
+rca, audio
+0
+3
+2
+RetroBitLab
+rca_yellow
+RCA Audio connector, yellow, Pro Signal p/n PSG01547
+rca, audio
+0
+3
+2
 Rotary_Encoder
 RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm
 Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html
